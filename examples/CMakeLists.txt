@@ -35,8 +35,8 @@ IF (BUILD_SHARED_LIBS)
   REMOVE_DEFINITIONS(-DCERES_BUILDING_SHARED_LIBRARY)
 ENDIF()
 
-ADD_EXECUTABLE(helloworld helloworld.cc)
-TARGET_LINK_LIBRARIES(helloworld ceres)
+ADD_EXECUTABLE(helloworld.js helloworld.cc)
+TARGET_LINK_LIBRARIES(helloworld.js ceres)
 
 ADD_EXECUTABLE(helloworld_numeric_diff helloworld_numeric_diff.cc)
 TARGET_LINK_LIBRARIES(helloworld_numeric_diff ceres)

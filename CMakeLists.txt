@@ -662,10 +662,12 @@ IF (MSVC)
   ADD_DEFINITIONS("-D_VARIADIC_MAX=10")
 ENDIF (MSVC)
 
+ADD_DEFINITIONS("-DEIGEN_ASM_COMMENT=")
+
 IF (UNIX)
   # GCC is not strict enough by default, so enable most of the warnings.
   SET(CMAKE_CXX_FLAGS
-    "${CMAKE_CXX_FLAGS} -Werror -Wall -Wextra -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-missing-field-initializers")
+    "${CMAKE_CXX_FLAGS} -Werror -Wall -Wextra -Wno-unused-value -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-missing-field-initializers")
 ENDIF (UNIX)
 
 # Use a larger inlining threshold for Clang, since it hobbles Eigen,
